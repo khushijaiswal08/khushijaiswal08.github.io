@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+/* ---------- Theme tokens ----------
+   Light is the default. Dark applies when the system asks for it (unless the
+   visitor chose light) or when the visitor chose dark with the toggle. */
+:root {
+  color-scheme: light;
+  --bg: #faf7f2;
+  --surface: #ffffff;
+  --ink: #1d1a17;
+  --muted: #5c554e;
+  --line: #e2dbd0;
+  --accent: #a83c15;
+  --accent-soft: #f6e6dc;
+  --on-accent: #ffffff;
+  --tag-auto: #3f5a4a;
+  --tag-ai: #a83c15;
+  --tag-human: #3b5378;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #141210;
+    --surface: #1c1a17;
+    --ink: #efeae3;
+    --muted: #a8a097;
+    --line: #322e28;
+    --accent: #f0915f;
+    --accent-soft: #33211a;
+    --on-accent: #141210;
+    --tag-auto: #9cc4ab;
+    --tag-ai: #f0915f;
+    --tag-human: #a3bde6;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #141210;
+  --surface: #1c1a17;
+  --ink: #efeae3;
+  --muted: #a8a097;
+  --line: #322e28;
+  --accent: #f0915f;
+  --accent-soft: #33211a;
+  --on-accent: #141210;
+  --tag-auto: #9cc4ab;
+  --tag-ai: #f0915f;
+  --tag-human: #a3bde6;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+  --color-tag-auto: var(--tag-auto);
+  --color-tag-ai: var(--tag-ai);
+  --color-tag-human: var(--tag-human);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-display: var(--font-newsreader), Georgia, "Times New Roman", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  overflow-wrap: break-word;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+/* Visible keyboard focus everywhere. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Theme toggle icons: shown by CSS so there is no hydration mismatch. */
+.icon-moon {
+  display: block;
+}
+.icon-sun {
+  display: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .icon-moon {
+    display: none;
+  }
+  :root:not([data-theme="light"]) .icon-sun {
+    display: block;
+  }
+}
+:root[data-theme="dark"] .icon-moon {
+  display: none;
+}
+:root[data-theme="dark"] .icon-sun {
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
