@@ -90,7 +90,9 @@ export const projects: Project[] = [
       "Docker",
     ],
     repoUrl: "https://github.com/khushijaiswal08/AI-Resume-Analyzer",
-    demoNote: "No hosted demo yet. The repository runs locally or in Docker.",
+    liveUrl: "https://ai-resume-analyzer-teps.onrender.com",
+    demoNote:
+      "Live demo on Render's free tier: the first visit after a quiet period can take up to a minute to wake up. Press Try a sample resume; the sample is fictional.",
     flagship: true,
     cover: {
       src: "/shots/resume-analyzer/score",
@@ -109,6 +111,7 @@ export const projects: Project[] = [
       "Detects the standard sections: summary, experience, education, skills, projects and certifications.",
       "Gives an explainable ATS-style score from 0 to 100 with a reason for every criterion. It is a transparent heuristic written for this project, not any real ATS vendor's algorithm.",
       "Matches the resume against a job description: matched skills, missing skills and a match percentage.",
+      "Critiques each experience and project bullet (action verb, metric, length, weak phrases), runs ATS parse-ability checks, and splits a job description into required and preferred skills. It also offers 8 target-role profiles for when there is no job description.",
       "Optionally adds AI insights through Gemini: a profile summary, improvement suggestions and tailored interview questions.",
       "Works fully without an API key; AI insights are then simply marked as not used.",
       "Ships as a web page, a JSON API and a command-line tool that all run the same pipeline.",
