@@ -40,7 +40,7 @@ export const timeline: TimelineEntry[] = [
   {
     kind: "Experience",
     title: "AI Automation Engineer",
-    place: "An e-commerce company in Jaipur",
+    place: "Ridhi Block Print, Jaipur",
     when: "Current role",
     summary:
       "Builds internal tools that replace manual, spreadsheet-based work, in a team with no senior engineers.",
