@@ -447,7 +447,7 @@ export const projects: Project[] = [
       "Amazon data moves by file rather than through Amazon's APIs, and sales are typed in.",
       "Not built: TikTok discovery, carrier tracking feeds, Shopify sync, ROI attribution, SSO and self-service password reset.",
     ],
-    note: "Built as an IT trainee for the marketing team at an e-commerce company in Jaipur. The code belongs to the employer and is published with its permission; no open-source licence is granted.",
+    note: "Built as an AI automation engineer for the marketing team at an e-commerce company in Jaipur. The code belongs to the employer and is published with its permission; no open-source licence is granted.",
   },
   {
     slug: "jaipur-realty",

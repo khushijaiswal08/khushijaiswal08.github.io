@@ -6,11 +6,11 @@
 export const profile = {
   name: "Khushi Jaiswal",
   /** Short line above the name in the hero; keep it to one line on phones. */
-  role: "AI & automation · IT Trainee (SDE-1)",
+  role: "AI Automation Engineer",
   pitch:
     "I build automation tools and LLM applications with guardrails: deterministic code does the deciding, the model adds what rules cannot, and tests check both.",
   intro:
-    "Final-year AI & Data Science student and IT trainee in Jaipur. At work I build internal tools that replace manual, spreadsheet-based processes.",
+    "Final-year AI & Data Science student and AI automation engineer in Jaipur. At work I build internal tools that replace manual, spreadsheet-based processes.",
   facts: [
     "BTech, Artificial Intelligence & Data Science",
     "Graduating June 2027",
@@ -39,7 +39,7 @@ export type TimelineEntry = {
 export const timeline: TimelineEntry[] = [
   {
     kind: "Experience",
-    title: "IT Trainee (SDE-1)",
+    title: "AI Automation Engineer",
     place: "An e-commerce company in Jaipur",
     when: "Current role",
     summary:
@@ -62,7 +62,7 @@ export const skills: SkillGroup[] = [
     items: [
       "Claude API",
       "Gemini API",
-      "Prompt design",
+      "Prompt engineering",
       "Structured outputs",
       "LLM guardrails",
     ],
